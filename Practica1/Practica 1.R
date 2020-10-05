@@ -12,3 +12,13 @@
 #4. Verifique si la variable iterada cae
 #5. Aumente el contador si la condición es verdadera
 #6. devuelve un resultado <- contador / N
+
+N  <- 1000
+Contador  <- 0
+
+for(i in rnorm( ))
+{
+  if(i >=-1 && i <=1){
+    Counter<- Counter+1
+  }
+}
