@@ -1,5 +1,5 @@
-                                  ### Instituto Nacional de México
-                               ### Instituto Tecnológico de Tijuana
+###                   Instituto Nacional de México
+###               Instituto Tecnológico de Tijuana
 ### Departamento de sistemas y computación
 
 ###  Ingeniería informática
