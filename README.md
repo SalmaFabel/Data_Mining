@@ -1,8 +1,8 @@
- #Instituto Nacional de México
+ # Instituto Nacional de México
  Instituto Tecnológico de Tijuana
  Departamento de sistemas y computación
 
-  Ingeniería informática
+>  Ingeniería informática
   Semestre Sep - Ene 2020
 
   Minería de Datos | BDD-1703SC9A
