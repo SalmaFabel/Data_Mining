@@ -20,7 +20,6 @@ Create a bar chart with vertical or horizontal bars.
 x <- c(1,2,3)
 barplot(x)
 ```
-![ScreenShot](https://github.com/SalmaFabel/Mineria_de_Datos/blob/Unit_1/Practicas/Funcion1.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/Funcion1.PNG)
 
-![Alt text](Funcion1.png "imagen")
 
