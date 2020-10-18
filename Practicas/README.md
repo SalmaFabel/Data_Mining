@@ -21,5 +21,5 @@ x <- c(1,2,3)
 barplot(x)
 ```
 
-<a href=""><img src="Funcion1.png" height="400px" width="400px"></a>
+<a href=""><img src="Funcion1.png"></a>
 
