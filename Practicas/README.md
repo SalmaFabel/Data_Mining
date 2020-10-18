@@ -1,6 +1,17 @@
 
 # Practice 1
 
+
+
+
+
+
+
+
+
+
+
+# Practice 2
 >**1st  function :** barplot().
 
 Create a bar chart with vertical or horizontal bars.
@@ -9,5 +20,4 @@ Create a bar chart with vertical or horizontal bars.
 x <- c(1,2,3)
 barplot(x)
 ```
-
-# Practice 2
+![Optional Text](C:\Users\salmi\OneDrive\Imágenes\Funcion1 R.png)
