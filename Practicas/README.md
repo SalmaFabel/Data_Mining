@@ -20,4 +20,4 @@ Create a bar chart with vertical or horizontal bars.
 x <- c(1,2,3)
 barplot(x)
 ```
-![Optional Text](C:\Users\salmi\OneDrive\Imágenes\Funcion1 R.png)
+![alt text](C:\Users\salmi\OneDrive\Imágenes\Funcion1 R.png)
