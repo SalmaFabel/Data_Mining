@@ -20,5 +20,5 @@ Create a bar chart with vertical or horizontal bars.
 x <- c(1,2,3)
 barplot(x)
 ```
-![Alt text]{Funcion1.png "imagen"}
+![ Alt text ]{ Funcion1.png "imagen" }
 
