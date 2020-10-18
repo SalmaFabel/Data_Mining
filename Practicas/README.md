@@ -22,5 +22,5 @@ barplot(x)
 ```
 ![ScreenShot](Funcion1.png)
 
-![ Alt text ]{ Funcion1.png "imagen" }
+![Alt text](Funcion1.png "imagen")
 
