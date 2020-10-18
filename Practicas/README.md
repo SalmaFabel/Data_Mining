@@ -20,6 +20,5 @@ Create a bar chart with vertical or horizontal bars.
 x <- c(1,2,3)
 barplot(x)
 ```
-<img src="/Users/salmi/OneDrive/Documentos/GitHub/Funcion1.png">
+<img src="C:/Users/salmi/OneDrive/Documentos/GitHub/Funcion1.png">
 
-![alt text](C:\Users\salmi\OneDrive\Imágenes\Funcion1 R.png)
