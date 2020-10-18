@@ -5,7 +5,7 @@
 
 Create a bar chart with vertical or horizontal bars.
 
-```
+```R
 x <- c(1,2,3)
 barplot(x)
 ```
