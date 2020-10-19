@@ -1,22 +1,33 @@
 
 # Unit 1
 
-##Index
+## Index
 
 - [Practice 1](https://github.com/SalmaFabel/Mineria_de_Datos/tree/Unit_1/Practicas#practice-1)
 - [Practice 2](https://github.com/SalmaFabel/Mineria_de_Datos/tree/Unit_1/Practicas#practice-2)
 
 ## Practice 1
 
+>**Instructions:**
 
 
+```{r,echo=true}
+Contador <-0
 
+for(i in rnorm(10000, mean = 0, sd=1))
+{
+  if(i >= -1 && i <= 1){
+    Contador<- Contador+1
+  }
+  else
+  {
+    
+  }
+}
+resultado <- Contador/N
 
-
-
-
-
-
+print(resultado)#[1] 0.6826
+```
 
 ## Practice 2
 
@@ -121,7 +132,93 @@ Where the character vector is written first, then where it begins and where it m
 ```{r,echo=true}
 substr(cadena, start = 1, stop = 4) ##[1] "Open"
 ```
+>**11th  function :** tolower().
+
+The tolower () function passes a string to lowercase.
 
 ```{r,echo=true}
+tolower(cadena)##[1] "openwebinars"
+```
 
+>**Vector declaration**
+
+```{r,echo=true}
+vector = c(5,6,7,8,9)
+```
+
+>**12th  function :** mean().
+
+This is a statistical function for the arithmetic mean.
+
+```{r,echo=true}
+mean(vector) ##[1] 7
+```
+
+>**13th  function :** median().
+
+This function calculates the median of the sample.
+
+```{r,echo=true}
+median(vector) ##[1] 7
+```
+
+>**14th  function :** max().
+
+With this function we obtain the maximum value of the vector.
+
+```{r,echo=true}
+max(vector) ##[1] 9
+```
+
+>**15th  function :** max().
+
+This function shows the minimum value and maximum value of a vector.
+
+```{r,echo=true}
+range(vector)##[1] 5 9
+```
+
+>**16th  function :** unique().
+
+We can obtain the unique values ​​of a vector, eliminating the records that are duplicated with the unique () function.
+
+```{r,echo=true}
+v1 = c(2,2,2,4,4,4)
+
+unique(v1)##[1] 2  4
+```
+
+>**17th  function :** toupper().
+
+This function returns an uppercase string.
+
+```{r,echo=true}
+toupper(cadena) ##[1] "OPENWEBINARS"
+```
+
+>**18th  function :** sin().
+
+It is a trigonometric function that calculates the sign of the given value.
+
+```{r,echo=true}
+sin(-2*pi) ##[1] 2.449213e-16
+```
+
+>**19th  function :** mode().
+
+With this function we can know or change the mode or type of the elements that make up the vector.
+
+```{r,echo=true}
+y<-seq(from=3, to=11, by=2)
+mode(y)##"numeric"
+# We change the vector y, to components in the complexes
+mode(y)<-"complex"
+y ##[1]  3+0i  5+0i  7+0i  9+0i 11+0i
+```
+>**20th  function :** sort().
+
+This function sorts (or orders) a vector or factor (partially) in ascending or descending order.
+
+```{r,echo=true}
+sort(vector)##[1] 5 6 7 8 9
 ```
