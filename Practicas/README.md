@@ -59,7 +59,7 @@ hist ( x )
 
 It is a mathematical function that returns the first smallest integer.
 
-```{r}
+```r
 floor(5.99)
 ```
 
@@ -67,7 +67,7 @@ floor(5.99)
 
 This math function removes the decimals from a number.
 
-```{r}
+```r
 x <- 56.13 
 trunc(x)
 ##[1] 56
@@ -76,14 +76,14 @@ trunc(x)
 
 This function generates “n” random numbers between start and end, in this example it would be 20 numbers between 1 and 10 and adding the trunc function so that they are only integers.
 
-```{r}
+```r
 trunc(runif(20,1,10)) ## [1] 8 7 8 8 4 4 3 7 3 6 6 5 4 6 8 4 4 5 6 8
 ```
 >**6th  function :** cat ().
 
 Output the objects, concatenating the representations. cat performs much less conversion than print.
 
-```{r}
+```r
 f <- function() 
 {
   cat("Hola Mundo")
@@ -97,7 +97,7 @@ class(f) ##[1] "function"
 This function given a set of logical vectors, is at least one of the values ​​true?
  Returns if any element meets the condition.
 
-```{r}
+```r
 x <- runif(10, -10 ,100) # 10 random numbers between -10 and 100 are generated
 if(any(x < 0)) cat("En x hay números negativos\n") # If any number of x is negative
 #### In x there are negative numbers
@@ -106,7 +106,7 @@ if(any(x < 0)) cat("En x hay números negativos\n") # If any number of x is nega
 
 It is a function of addition.
 
-```{r}
+```r
 
 sum(x=2,y=3)##[1] 5
 sum(2,3)
@@ -117,14 +117,14 @@ sum(2,3)
 
 It is a diverse mathematical function where abs (x) calculates the absolute value of x.
 
-```{r}
+```r
 abs(-3)
 ##[1] 3
 ```
 
 >**Declaration of character** 
 
-```{r}
+```r
 cadena = "OpenWebinars"
 ```
 
@@ -133,7 +133,7 @@ cadena = "OpenWebinars"
 This is a character function, which extracts or replaces substrings in a character vector.
 Where the character vector is written first, then where it begins and where it must end.
 
-```{r,echo=true}
+```r
 
 substr(cadena, start = 1, stop = 4) ##[1] "Open"
 
@@ -142,13 +142,13 @@ substr(cadena, start = 1, stop = 4) ##[1] "Open"
 
 The tolower () function passes a string to lowercase.
 
-```{r}
+```r
 tolower(cadena)##[1] "openwebinars"
 ```
 
 >**Vector declaration**
 
-```{r}
+```r
 vector = c(5,6,7,8,9)
 ```
 
@@ -156,7 +156,7 @@ vector = c(5,6,7,8,9)
 
 This is a statistical function for the arithmetic mean.
 
-```{r}
+```r
 mean(vector) ##[1] 7
 ```
 
@@ -164,7 +164,7 @@ mean(vector) ##[1] 7
 
 This function calculates the median of the sample.
 
-```{r}
+```r
 median(vector) ##[1] 7
 ```
 
@@ -172,7 +172,7 @@ median(vector) ##[1] 7
 
 With this function we obtain the maximum value of the vector.
 
-```{r}
+```r
 max(vector) ##[1] 9
 ```
 
@@ -180,7 +180,7 @@ max(vector) ##[1] 9
 
 This function shows the minimum value and maximum value of a vector.
 
-```{r}
+```r
 range(vector)##[1] 5 9
 ```
 
@@ -188,7 +188,7 @@ range(vector)##[1] 5 9
 
 We can obtain the unique values ​​of a vector, eliminating the records that are duplicated with the unique () function.
 
-```{r}
+```r
 v1 = c(2,2,2,4,4,4)
 
 unique(v1)##[1] 2  4
@@ -198,7 +198,7 @@ unique(v1)##[1] 2  4
 
 This function returns an uppercase string.
 
-```{r}
+```r
 toupper(cadena) ##[1] "OPENWEBINARS"
 ```
 
@@ -206,7 +206,7 @@ toupper(cadena) ##[1] "OPENWEBINARS"
 
 It is a trigonometric function that calculates the sign of the given value.
 
-```{r}
+```r
 sin(-2*pi) ##[1] 2.449213e-16
 ```
 
