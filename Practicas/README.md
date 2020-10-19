@@ -11,7 +11,7 @@
 >**Instructions:**
 
 
-```{r}
+```r
 
 Contador <-0
 
@@ -39,7 +39,7 @@ In this practice, there are 20 more functions in R than had been explained in cl
 
 Create a bar chart with vertical or horizontal bars.
 
-```{r}
+```r
 x <- c(1,2,3)
 barplot(x)
 ```
@@ -49,7 +49,7 @@ barplot(x)
 
 The generic function hist calculates a histogram of the given data values.
 
-```{r}
+```r
 hist ( x )
 ```
 
@@ -214,7 +214,7 @@ sin(-2*pi) ##[1] 2.449213e-16
 
 With this function we can know or change the mode or type of the elements that make up the vector.
 
-```{r}
+```r
 y<-seq(from=3, to=11, by=2)
 mode(y)##"numeric"
 # We change the vector y, to components in the complexes
@@ -225,6 +225,6 @@ y ##[1]  3+0i  5+0i  7+0i  9+0i 11+0i
 
 This function sorts (or orders) a vector or factor (partially) in ascending or descending order.
 
-```{r}
+```r
 sort(vector)##[1] 5 6 7 8 9
 ```
