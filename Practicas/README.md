@@ -11,7 +11,7 @@
 >**Instructions:**
 
 
-```{r,echo=true}
+```{r}
 
 Contador <-0
 
@@ -28,6 +28,7 @@ for(i in rnorm(10000, mean = 0, sd=1))
 resultado <- Contador/N
 
 print(resultado)#[1] 0.6826
+
 ```
 
 ## Practice 2
@@ -38,8 +39,7 @@ In this practice, there are 20 more functions in R than had been explained in cl
 
 Create a bar chart with vertical or horizontal bars.
 
-```{r,echo=true}
-
+```{r}
 x <- c(1,2,3)
 barplot(x)
 ```
@@ -49,8 +49,7 @@ barplot(x)
 
 The generic function hist calculates a histogram of the given data values.
 
-```{r,echo=true}
-
+```{r}
 hist ( x )
 ```
 
@@ -68,7 +67,7 @@ floor(5.99)
 
 This math function removes the decimals from a number.
 
-```{r,echo=true}
+```{r}
 x <- 56.13 
 trunc(x)
 ##[1] 56
@@ -77,14 +76,14 @@ trunc(x)
 
 This function generates “n” random numbers between start and end, in this example it would be 20 numbers between 1 and 10 and adding the trunc function so that they are only integers.
 
-```{r,echo=true}
+```{r}
 trunc(runif(20,1,10)) ## [1] 8 7 8 8 4 4 3 7 3 6 6 5 4 6 8 4 4 5 6 8
 ```
 >**6th  function :** cat ().
 
 Output the objects, concatenating the representations. cat performs much less conversion than print.
 
-```{r,echo=true}
+```{r}
 f <- function() 
 {
   cat("Hola Mundo")
@@ -98,7 +97,7 @@ class(f) ##[1] "function"
 This function given a set of logical vectors, is at least one of the values ​​true?
  Returns if any element meets the condition.
 
-```{r,echo=true}
+```{r}
 x <- runif(10, -10 ,100) # 10 random numbers between -10 and 100 are generated
 if(any(x < 0)) cat("En x hay números negativos\n") # If any number of x is negative
 #### In x there are negative numbers
@@ -107,23 +106,25 @@ if(any(x < 0)) cat("En x hay números negativos\n") # If any number of x is nega
 
 It is a function of addition.
 
-```{r,echo=true}
+```{r}
+
 sum(x=2,y=3)##[1] 5
 sum(2,3)
+
 ```
 
 >**9th  function :** abs().
 
 It is a diverse mathematical function where abs (x) calculates the absolute value of x.
 
-```{r,echo=true}
+```{r}
 abs(-3)
 ##[1] 3
 ```
 
 >**Declaration of character** 
 
-```{r,echo=true}
+```{r}
 cadena = "OpenWebinars"
 ```
 
@@ -133,19 +134,21 @@ This is a character function, which extracts or replaces substrings in a charact
 Where the character vector is written first, then where it begins and where it must end.
 
 ```{r,echo=true}
+
 substr(cadena, start = 1, stop = 4) ##[1] "Open"
+
 ```
 >**11th  function :** tolower().
 
 The tolower () function passes a string to lowercase.
 
-```{r,echo=true}
+```{r}
 tolower(cadena)##[1] "openwebinars"
 ```
 
 >**Vector declaration**
 
-```{r,echo=true}
+```{r}
 vector = c(5,6,7,8,9)
 ```
 
@@ -153,7 +156,7 @@ vector = c(5,6,7,8,9)
 
 This is a statistical function for the arithmetic mean.
 
-```{r,echo=true}
+```{r}
 mean(vector) ##[1] 7
 ```
 
@@ -161,7 +164,7 @@ mean(vector) ##[1] 7
 
 This function calculates the median of the sample.
 
-```{r,echo=true}
+```{r}
 median(vector) ##[1] 7
 ```
 
@@ -169,7 +172,7 @@ median(vector) ##[1] 7
 
 With this function we obtain the maximum value of the vector.
 
-```{r,echo=true}
+```{r}
 max(vector) ##[1] 9
 ```
 
@@ -177,7 +180,7 @@ max(vector) ##[1] 9
 
 This function shows the minimum value and maximum value of a vector.
 
-```{r,echo=true}
+```{r}
 range(vector)##[1] 5 9
 ```
 
@@ -185,7 +188,7 @@ range(vector)##[1] 5 9
 
 We can obtain the unique values ​​of a vector, eliminating the records that are duplicated with the unique () function.
 
-```{r,echo=true}
+```{r}
 v1 = c(2,2,2,4,4,4)
 
 unique(v1)##[1] 2  4
@@ -195,7 +198,7 @@ unique(v1)##[1] 2  4
 
 This function returns an uppercase string.
 
-```{r,echo=true}
+```{r}
 toupper(cadena) ##[1] "OPENWEBINARS"
 ```
 
@@ -203,7 +206,7 @@ toupper(cadena) ##[1] "OPENWEBINARS"
 
 It is a trigonometric function that calculates the sign of the given value.
 
-```{r,echo=true}
+```{r}
 sin(-2*pi) ##[1] 2.449213e-16
 ```
 
@@ -211,7 +214,7 @@ sin(-2*pi) ##[1] 2.449213e-16
 
 With this function we can know or change the mode or type of the elements that make up the vector.
 
-```{r,echo=true}
+```{r}
 y<-seq(from=3, to=11, by=2)
 mode(y)##"numeric"
 # We change the vector y, to components in the complexes
@@ -222,6 +225,6 @@ y ##[1]  3+0i  5+0i  7+0i  9+0i 11+0i
 
 This function sorts (or orders) a vector or factor (partially) in ascending or descending order.
 
-```{r,echo=true}
+```{r}
 sort(vector)##[1] 5 6 7 8 9
 ```
