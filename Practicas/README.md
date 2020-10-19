@@ -12,6 +12,7 @@
 
 
 ```{r,echo=true}
+
 Contador <-0
 
 for(i in rnorm(10000, mean = 0, sd=1))
@@ -38,6 +39,7 @@ In this practice, there are 20 more functions in R than had been explained in cl
 Create a bar chart with vertical or horizontal bars.
 
 ```{r,echo=true}
+
 x <- c(1,2,3)
 barplot(x)
 ```
@@ -48,6 +50,7 @@ barplot(x)
 The generic function hist calculates a histogram of the given data values.
 
 ```{r,echo=true}
+
 hist ( x )
 ```
 
