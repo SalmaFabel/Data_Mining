@@ -60,7 +60,7 @@ hist ( x )
 
 It is a mathematical function that returns the first smallest integer.
 
-```{r echo=true}
+```{r}
 floor(5.99)
 ```
 
