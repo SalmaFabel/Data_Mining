@@ -31,4 +31,4 @@ for(i in rnorm(10000, mean = 0, sd=1))
 }
 resultado <- Contador/N
 
-print(Contador)#[1] 0.6826
+print(resultado)#[1] 0.6826
