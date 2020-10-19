@@ -16,19 +16,19 @@
 # 5. Aumente el contador si la condición es verdadera
 # 6. devuelve un resultado <- contador / N
 
-N <-10000#1
-Contador <-0#2
 
-for(i in rnorm(N, mean = 0, sd=1))#3
+Contador <-0
+
+for(i in rnorm(10000, mean = 0, sd=1))
 {
   if(i >= -1 && i <= 1){
-    Contador<- Contador+1#5
+    Contador<- Contador+1
   }
   else
   {
     
   }
 }
-resultado <- Contador/N#6
+resultado <- Contador/N
 
-print(resultado)#[1] 0.6826
+print(Contador)#[1] 0.6826
