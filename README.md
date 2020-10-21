@@ -11,7 +11,7 @@
 ####   Repositorio
 
 ####   Equipo:
-####  Arellano  Ramirez Jose Luis 
+
 ####   Hernandez Negrete Salma Fabel 16212354
 
 
