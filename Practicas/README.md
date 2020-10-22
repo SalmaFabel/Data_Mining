@@ -11,6 +11,25 @@
 
 >**Instructions:**
 
+>Test the Law Of Large Numbers for N random normally distributed numbers with mean = 0, stdev=1:
+
+>Create an R script that will count how many of these numbers fall between -1 and 1 and divide
+by the total quantity of N
+
+>You know that E(X) = 68.2%
+
+>Check that Mean(Xn)->E(X) as you rerun your script while increasing N
+
+>Hint:
+>1. Initialize sample size
+>2. Initialize counter
+>3. loop for(i in rnorm(size))
+>4. Check if the iterated variable falls
+>5. Increase counter if the condition is true
+>6. return a result <- counter / N
+
+In this practice the law of large numbers was applied using rnorm, first as the instructions say, the sample size is declared, then there is the counter that starts from 0, then there is the creation of the (for) loop where mean would be the vector mean and sd would be the standard deviation vector, the vector with random numbers is generated. In part 3 of the instructions it explains how the for should be declared, in the size part since we are using rnorm it is used in the following way rnorm (10000, mean = 0, sd = 1) where N is the length of the sample .
+Then there is the condition, as we want to know how many numbers there are between -1 to 1, the condition is written if i of the for loop that generates is within that range, the counter that was declared at the beginning will increase by 1, once the forum reaches the number of the sample of the times of the cycle, the result variable is declared which as the instructions say will be the counter between the sample number and then the result is printed which the times it was executed were 0.6818, 0.6788 and 0.6782. It was tested with 3 sample types of 10, 100 and 10000, but the one that was within the range was 1000
 
 ```r
 
@@ -230,3 +249,111 @@ This function sorts (or orders) a vector or factor (partially) in ascending or d
 sort(vector)##[1] 5 6 7 8 9
 ```
 ## Practice 3
+
+```r
+revenue <- c(14574.49, 7606.46, 8611.41, 9175.41, 8058.65, 8105.44, 11496.28, 9766.09, 10305.32, 14379.96, 10713.97, 15433.50)
+expenses <- c(12051.82, 5695.07, 12319.20, 12089.72, 8658.57, 840.20, 3285.73, 5821.12, 6976.93, 16618.61, 10054.37, 3803.96)
+```
+
+```r
+profit <- revenue - expenses
+profit
+```
+
+```r
+tax <- round(0.30 * profit, 2)
+tax 
+```
+
+```r
+profit.after.tax <- profit - tax
+profit.after.tax
+```
+
+```r
+profit.margin <- round(profit.after.tax/revenue, 2) * 100
+profit.margin
+```
+
+```r
+mean_pat <- mean(profit.after.tax)
+mean_pat
+```
+
+```r
+good.months <- profit.after.tax > mean_pat
+good.months
+```
+
+```r
+bad.months <- !good.months
+bad.months
+```
+
+
+```r
+best.month <- profit.after.tax == max(profit.after.tax)
+best.month
+```
+
+```r
+worst.month <- profit.after.tax == min(profit.after.tax)
+worst.month
+```
+
+```r
+revenue.1000 <- round(revenue/1000,0)
+expenses.1000 <- round(expenses/1000,0)
+profit.1000 <- round(profit/1000,0)
+profit.after.tax.1000 <- round(profit.after.tax/1000,0)
+```
+
+```r
+revenue.1000
+expenses.1000
+profit.1000
+profit.after.tax.1000
+profit.margin
+good.months
+bad.months
+best.month
+worst.month
+```
+
+```r
+M <- rbind(
+  revenue.1000,
+  expenses.1000,
+  profit.1000,
+  profit.after.tax.1000,
+  profit.margin,
+  good.months,
+  bad.months,
+  best.month,
+  worst.month
+)
+M
+```
+
+## Practice 4
+
+```r
+Seasons <- c("2005","2006","2007","2008","2009","2010","2011","2012","2013","2014")
+```
+
+```r
+Players <- c("KobeBryant","JoeJohnson","LeBronJames","CarmeloAnthony","DwightHoward","ChrisBosh","ChrisPaul","KevinDurant","DerrickRose","DwayneWade")
+```
+
+```r
+KobeBryant_FT <- c(696,667,623,483,439,483,381,525,18,196)
+JoeJohnson_FT <- c(261,235,316,299,220,195,158,132,159,141)
+LeBronJames_FT <- c(601,489,549,594,593,503,387,403,439,375)
+CarmeloAnthony_FT <- c(573,459,464,371,508,507,295,425,459,189)
+DwightHoward_FT <- c(356,390,529,504,483,546,281,355,349,143)
+ChrisBosh_FT <- c(474,463,472,504,470,384,229,241,223,179)
+ChrisPaul_FT <- c(394,292,332,455,161,337,260,286,295,289)
+KevinDurant_FT <- c(209,209,391,452,756,594,431,679,703,146)
+DerrickRose_FT <- c(146,146,146,197,259,476,194,0,27,152)
+DwayneWade_FT <- c(629,432,354,590,534,494,235,308,189,284)
+```

@@ -8,7 +8,7 @@
 - [Practice 1](https://github.com/SalmaFabel/Mineria_de_Datos/tree/Unit_1/Practicas#practice-1)
 - [Practice 2](https://github.com/SalmaFabel/Mineria_de_Datos/tree/Unit_1/Practicas#practice-2)
 - [Practice 3](https://github.com/SalmaFabel/Mineria_de_Datos/tree/Unit_1/Practicas#practice-3)
-- [Practice 4](https://github.com/SalmaFabel/Mineria_de_Datos/tree/Unit_1/Practicas#practice-3)
+- [Practice 4](https://github.com/SalmaFabel/Mineria_de_Datos/tree/Unit_1/Practicas#practice-4)
 
 ### Research / Homework Index
 
