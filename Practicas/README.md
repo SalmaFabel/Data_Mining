@@ -3,9 +3,11 @@
 
 ## Index
 
+- [Practice GitFlow](https://github.com/SalmaFabel/Mineria_de_Datos/blob/Unit_1/Practicas/Practice%20GitFlow.md#practice-gitflow)
 - [Practice 1](https://github.com/SalmaFabel/Mineria_de_Datos/tree/Unit_1/Practicas#practice-1)
 - [Practice 2](https://github.com/SalmaFabel/Mineria_de_Datos/tree/Unit_1/Practicas#practice-2)
 - [Practice 3](https://github.com/SalmaFabel/Mineria_de_Datos/tree/Unit_1/Practicas#practice-3)
+- [Practice 4](https://github.com/SalmaFabel/Mineria_de_Datos/tree/Unit_1/Practicas#practice-4)
 
 ## Practice 1
 
@@ -336,6 +338,21 @@ M
 ```
 
 ## Practice 4
+
+>Free Throws
+
+>You have been supplide data for two additiona in-game statics:
+>-  Free Throws
+>-  Free Throws Attempt
+
+>You need to create three plots that portray the following insights:
+>-  Free Trows Attempts per game
+>-  Accurance of Free Trhows
+>-  Player playing style (2 vs 3 points preference) excluding Free Throws
+
+>Each Free Throw is worth 1 Point
+
+>The data has been supplied in the form of vectors. You will have to Create the matrices before you proceed with the analysis.
 
 ```r
 Seasons <- c("2005","2006","2007","2008","2009","2010","2011","2012","2013","2014")
