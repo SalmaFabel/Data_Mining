@@ -3,42 +3,41 @@
 Link Github  “pratica_git_flow”
 https://github.com/SalmaFabel/pratica_git_flow.git
 
-#### Cuenta de github
->Para la presente práctica se crea la cuenta de Github, pero ya se tenía creada.
+#### Github account
+>For this practice, the Github account is created, but it was already created.
 
 ![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/cuentaGithub.PNG)
 
-#### Llave SSH
+#### SSH key
 
->Se configura la llave ssh en github para que no se tenga que poner siempre nuestro usuario y contraseña, para ello se realizaron los siguientes pasos:
+>The ssh key is configured in github so that we do not always have to put our username and password, for this the following steps were carried out:
 
->Se descargan 3 herramientas de putty. Se ejecuta “puttygen” para que genere la clave privada, las herramientas se descargan de la siguiente página:
+>3 putty tools are downloaded. "Puttygen" is executed to generate the private key, the tools are downloaded from the following page: 
 https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 
 ![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/HerramientasPutty.PNG)
 
->En donde dice “puttygen” se selecciona, para generar la clave privada y nos aparece lo siguiente :
+>Where it says "puttygen" is selected, to generate the private key and the following appears:
 
 ![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/Putty%20key%20generator.PNG)
 
->Se genera la clave y se le escribe una contraseña, con la cual se podrá consultar después la clave . 
-Se guarda la contraseña.
+>The key is generated and a password is written for it, with which the key can be consulted later. The password is saved.
 
 ![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/Putty%20Key.PNG)
 
->Las herramientas se guardan en una carpeta dentro del inicio, se agrega en las variables del entorno del sistema con la referencia de la herramienta “plink.exe”.
+>The tools are saved in a folder inside the startup, it is added in the variables of the system environment with the reference of the tool "plink.exe".
 
 ![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/VariablesEntorno.PNG)
 
->En la cuenta de github, en configuraciones, nos dirigimos donde dice llave SSH se pega la clave pública.
+>In the github account, in configurations, we go where it says SSH key the public key is pasted.
 
 ![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/GithubSSH.PNG)
 
->Una vez que se guarda, se visualiza en nuestro github de la siguiente forma:
+>Once it is saved, it is displayed in our github as follows:
 
 ![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/SSHvisualizacion.PNG)
 
->Ya para terminar con la configuración de ssh entras a “git Bash” introduces tu usuario y contraseña. Después clones el repositorio y ya no te vuelve a pedir los datos. 
+>To finish with the ssh configuration you enter "git Bash" and enter your username and password. Then you clone the repository and it no longer asks for the data.
 
 ```
 salmi@HENSF2 MINGW64 /c/Program Files/PuTTY
@@ -57,17 +56,17 @@ Using SSH protocol version 2
 
 ```
 
->Como prueba de que se realizó de manera correcta, si nos vamos a github donde está la llave ssh podemos observar que aparece que la usamos.
+>As proof that it was done correctly, if we go to github where the ssh key is, we can see that it appears that we use it.
 
 ![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/UsoSSH.PNG)
 
-#### Creación del repositorio “pratica_git_flow”
+#### Creation of the repository "pratica_git_flow"
 
->En esta parte de la práctica se crea el repositorio.
+>In this part of the practice the repository is created.
 
 ![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/RepositorioGitflow.PNG)
 
-#### Clonar repositorio en la PC
+#### Clone repository on PC
 
 ```
 salmi@HENSF2 MINGW64 ~/OneDrive/Documentos/GitHub
@@ -76,13 +75,13 @@ Cloning into 'practica_git_flow'...
 
 ```
 
->Visualización del repositorio clonado.
+>Viewing the cloned repository.
 
 ![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/ClonarRepositorio.PNG)
 
-#### Rama (branch) development 
+#### Development branch
 
->Una vez que tenemos el repositorio clonado lo que sigue es crear las ramas con “git branch” podemos saber en qué rama nos encontramos, en este caso es la “master” que está por default.
+>Once we have the cloned repository, what follows is to create the branches with "git branch" we can know in which branch we are, in this case it is the "master" that is by default.
 
 ```
 salmi@HENSF2 MINGW64 ~/OneDrive/Documentos/GitHub/pratica_git_flow (master)
@@ -91,7 +90,7 @@ $ git branch
 
 ```
 
->Se utiliza el siguiente comando para crear la rama “development”
+>The following command is used to create the "development" branch
 
 ```
 salmi@HENSF2 MINGW64 ~/OneDrive/Documentos/GitHub/pratica_git_flow (master)
@@ -99,9 +98,9 @@ $ git checkout -b development
 
 ```
 
->Se modifica el README.md
+>README.md is modified
 
-#### Commit en la rama development
+#### Commit on the development branch
 
 ```
 salmi@HENSF2 MINGW64 ~/OneDrive/Documentos/GitHub/pratica_git_flow (development)
@@ -124,7 +123,7 @@ $ git commit -m "rama development"
 
 ```
 
->Push en la rama development
+>Push in the development branch
 
 ```
 salmi@HENSF2 MINGW64 ~/OneDrive/Documentos/GitHub/pratica_git_flow (development)
@@ -132,11 +131,11 @@ $ git push --set-upstream origin development
 
 ```
 
->Visualización de la modificación de la rama development
+>Viewing the development branch modification
 
 ![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/RamaDevelopment.PNG)
 
-#### Rama (branch) features
+#### Branch features
 
 ```
 salmi@HENSF2 MINGW64 ~/OneDrive/Documentos/GitHub/pratica_git_flow (development)
@@ -145,7 +144,7 @@ Switched to a new branch 'features'
 
 ```
 
->Commit en la rama features
+>Commit on the features branch
 
 ```
 salmi@HENSF2 MINGW64 ~/OneDrive/Documentos/GitHub/pratica_git_flow (features)
@@ -159,7 +158,7 @@ $ git commit -m "rama features"
 
 ```
 
->Push en la rama features
+>Push on the features branch
 
 ```
 salmi@HENSF2 MINGW64 ~/OneDrive/Documentos/GitHub/pratica_git_flow (features)
@@ -167,7 +166,7 @@ $ git push --set-upstream origin features
 
 ```
 
->Visualización de la modificación de la rama features.
+>Viewing the modification of the features branch.
 
 ![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/RamaFeatures.PNG)
 
