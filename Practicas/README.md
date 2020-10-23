@@ -252,56 +252,101 @@ sort(vector)##[1] 5 6 7 8 9
 ```
 ## Practice 3
 
+>Data
+
+First we have the following vectors, one is income and the other is expenses.
+
 ```r
 revenue <- c(14574.49, 7606.46, 8611.41, 9175.41, 8058.65, 8105.44, 11496.28, 9766.09, 10305.32, 14379.96, 10713.97, 15433.50)
 expenses <- c(12051.82, 5695.07, 12319.20, 12089.72, 8658.57, 840.20, 3285.73, 5821.12, 6976.93, 16618.61, 10054.37, 3803.96)
 ```
+
+>Calculate Profit As The Differences Between Revenue And Expenses
+
+The expenses will be subtracted from the income, the numerical variable "profit" will be saved within that variable the result.
 
 ```r
 profit <- revenue - expenses
 profit
 ```
 
+>Calculate Tax As 30% Of Profit And Round To 2 Decimal Points
+
+"Round" is used to round the result of the operation, within the function "profit" will be multiplied, which are the profits that were previously calculated and then we specify that the rounding of the result will be 2 decimal points, all this goes to save in the variable "tax".
+
 ```r
 tax <- round(0.30 * profit, 2)
 tax 
 ```
+
+>Calculate Profit Remaining After Tax Is Deducted
+
+Since the remaining earnings after taxes are calculated, "profit" is subtracted, which is the earnings, minus the taxes that were calculated in "tax".
 
 ```r
 profit.after.tax <- profit - tax
 profit.after.tax
 ```
 
+>Calculate The Profit Margin As Profit After Tax Over Revenue
+
+>Round To 2 Decimal Points, Then Multiply By 100 To Get %
+
+In this part all the operation goes inside the round function so that it rounds the result the same as when the profit was calculated in 2 decimal points. As the instruction says it will be the profit margin, which would be the profit after taxes that were calculated above on income, and at the end it is multiplied by 100 to get the percentage of the result after rounding.
+
 ```r
 profit.margin <- round(profit.after.tax/revenue, 2) * 100
 profit.margin
 ```
+
+>Calculate The Mean Profit After Tax For The 12 Months
+
+In this part, we use the “mean” function to average the earnings after taxes.
 
 ```r
 mean_pat <- mean(profit.after.tax)
 mean_pat
 ```
 
+>Find The Months With Above-Mean Profit After Tax
+
+Here the result will give us "true" or "false" if there was a profit that month or not, for that is "mean_pat" which calculates the mean of a set of patterns.
+
 ```r
 good.months <- profit.after.tax > mean_pat
 good.months
 ```
+
+>Bad Months Are The Opposite Of Good Months !
+
+What is done here is that the "true" are now false and vice versa.
 
 ```r
 bad.months <- !good.months
 bad.months
 ```
 
+>The Best Month Is Where Profit After Tax Was Equal To The Maximum
+
+Now to know which was the best month will be the one where the profit after tax is equal to the maximum profit after tax and sandra is true in that month.
 
 ```r
 best.month <- profit.after.tax == max(profit.after.tax)
 best.month
 ```
 
+>The Worst Month Is Where Profit After Tax Was Equal To The Minimum
+
+Same as the previous one, only instead of using the max function to get the maximum profit after taxes, it would be the min to get the lowest of this and it will show true in the month that was worst.
+
 ```r
 worst.month <- profit.after.tax == min(profit.after.tax)
 worst.month
 ```
+
+>Convert All Calculations To Units Of One Thousand Dollars
+
+Finally, to see the results in units of one thousand dollars, dividing it by 1000 and at the end rounding the result.
 
 ```r
 revenue.1000 <- round(revenue/1000,0)
@@ -309,6 +354,7 @@ expenses.1000 <- round(expenses/1000,0)
 profit.1000 <- round(profit/1000,0)
 profit.after.tax.1000 <- round(profit.after.tax/1000,0)
 ```
+>Print Results
 
 ```r
 revenue.1000
@@ -321,6 +367,10 @@ bad.months
 best.month
 worst.month
 ```
+
+>BONUS:
+
+>Preview Of What's Coming In The Next Section
 
 ```r
 M <- rbind(
@@ -339,38 +389,4 @@ M
 
 ## Practice 4
 
->Free Throws
-
->You have been supplide data for two additiona in-game statics:
->-  Free Throws
->-  Free Throws Attempt
-
->You need to create three plots that portray the following insights:
->-  Free Trows Attempts per game
->-  Accurance of Free Trhows
->-  Player playing style (2 vs 3 points preference) excluding Free Throws
-
->Each Free Throw is worth 1 Point
-
->The data has been supplied in the form of vectors. You will have to Create the matrices before you proceed with the analysis.
-
-```r
-Seasons <- c("2005","2006","2007","2008","2009","2010","2011","2012","2013","2014")
-```
-
-```r
-Players <- c("KobeBryant","JoeJohnson","LeBronJames","CarmeloAnthony","DwightHoward","ChrisBosh","ChrisPaul","KevinDurant","DerrickRose","DwayneWade")
-```
-
-```r
-KobeBryant_FT <- c(696,667,623,483,439,483,381,525,18,196)
-JoeJohnson_FT <- c(261,235,316,299,220,195,158,132,159,141)
-LeBronJames_FT <- c(601,489,549,594,593,503,387,403,439,375)
-CarmeloAnthony_FT <- c(573,459,464,371,508,507,295,425,459,189)
-DwightHoward_FT <- c(356,390,529,504,483,546,281,355,349,143)
-ChrisBosh_FT <- c(474,463,472,504,470,384,229,241,223,179)
-ChrisPaul_FT <- c(394,292,332,455,161,337,260,286,295,289)
-KevinDurant_FT <- c(209,209,391,452,756,594,431,679,703,146)
-DerrickRose_FT <- c(146,146,146,197,259,476,194,0,27,152)
-DwayneWade_FT <- c(629,432,354,590,534,494,235,308,189,284)
-```
+>[Practice 4](https://docs.google.com/document/d/1bHfNwDUUhB2INAsmONEcNZl6nahIRc6T5l1LXDeIQ2M/edit?usp=sharing)
