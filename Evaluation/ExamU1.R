@@ -46,22 +46,26 @@ head(merged2)
 #Dispersion diagram
 
 #Country 1960
-qplot(data = merged2, x = Fertility.Rate, y = Life_Expectancy1960,
+qplot(data = stats2, x = Fertility.Rate, y = Life_Expectancy1960,
       color = Country.Code, size=I(3), shape=I(19), alpha =I(.4), 
-      main = "Fertility.Rate vs Life_Expectancy1960")
+      main = "Fertility.Rate vs Life_Expectancy1960(Country)")
+
+stats2<-merged2[merged2$Region=="Oceania",]
 
 #region 1960
 qplot(data = merged2, x = Fertility.Rate, y = Life_Expectancy1960,
       color = Region, size=I(3), shape=I(19), alpha =I(.4), 
-      main = "Fertility.Rate vs Life_Expectancy1960")
+      main = "Fertility.Rate vs Life_Expectancy1960(Region)")
 
 #Country 2013
-qplot(data = merged2, x = Fertility.Rate, y = Life_Expectancy2013,
+qplot(data = stats3, x = Fertility.Rate, y = Life_Expectancy2013,
       color = Country.Code, size=I(3), shape=I(19), alpha =I(.4), 
-      main = "Fertility.Rate vs Life_Expectancy2013")
+      main = "Fertility.Rate vs Life_Expectancy2013(Country)")
+
+stats3<-merged2[merged2$Region=="Oceania",]
 
 #region 2013
 qplot(data = merged2, x = Fertility.Rate, y = Life_Expectancy2013,
       color = Region, size=I(3), shape=I(19), alpha =I(.4), 
-      main = "Fertility.Rate vs Life_Expectancy2013")
+      main = "Fertility.Rate vs Life_Expectancy2013(Region)")
 
