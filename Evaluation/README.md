@@ -75,7 +75,7 @@ head(merged2)
 
 #### Scatter plots
 
-#####1960
+##### 1960
 
 >To make the scatter graph as the instructions say the part of the graph, x will be the fertility that has the name "Fertility.Rate" and "y" will be "Life_Expectancy1960" and color will be the country code.
 
@@ -92,7 +92,7 @@ qplot(data = merged2, x = Fertility.Rate, y = Life_Expectancy1960,
       color = Region, size=I(3), shape=I(19), alpha =I(.4), 
       main = "Fertility.Rate vs Life_Expectancy1960(Region)")
 ```
-#####2013
+##### 2013
 
 >Since it cannot be seen in the scatter charts by country code, a form was made to analyze the countries by region as follows:
 

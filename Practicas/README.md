@@ -14,6 +14,9 @@
 - [Pair Coding](https://github.com/SalmaFabel/Mineria_de_Datos/blob/Unit_1/Research%20-%20Homework/Pair%20Coding.md#pair-coding)
 - [Pearson's correlation](https://github.com/SalmaFabel/Mineria_de_Datos/blob/Unit_1/Research%20-%20Homework/Pearson's%20correlation.md#pearsons-correlation)
 
+### Exam 1
+
+- [Exam 1](https://github.com/SalmaFabel/Mineria_de_Datos/tree/Unit_1/Evaluation)
 
 ## Practice 1
 
