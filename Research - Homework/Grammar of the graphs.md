@@ -12,6 +12,8 @@ qplot(mpg, data = mtcars, bins=5)
 
 ```
 
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/t1U2.PNG)
+
 >Although it is indicated by default, you can still include that the type of geometry of the graph to be drawn is histogram. The result will be the same as the previous graph.
 Add vertical lines to show the mean and median.
 
@@ -20,6 +22,8 @@ qplot(mpg, data = mtcars, bins=5, geom = "histogram") +
 geom_vline(xintercept = mean(mtcars$mpg), color="red")+
 geom_vline(xintercept = median(mtcars$mpg), color="blue")
 ```
+
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2 #2.PNG)
 
 ### Density
 
@@ -31,12 +35,15 @@ qplot(mpg, data = mtcars, bins=5, geom = "density", fill = as.factor(am))
 
 ```
 
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2 #3.PNG)
 
 ```r
 
 qplot(mpg, data = mtcars, bins=5, geom = "density", color = as.factor(am), linetype= as.factor(am))
 
 ```
+
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2 #4.PNG)
 
 ### Graph separation
 
@@ -48,6 +55,8 @@ qplot(mpg, data = mtcars, bins=5, geom = "density", color = as.factor(am), facet
 
 ```
 
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#5.PNG)
+
 ```r
 qplot(mpg, data = mtcars, geom = "density",
       xlab = "galones por millas", ylab = "Densidas", 
@@ -55,11 +64,15 @@ qplot(mpg, data = mtcars, geom = "density",
 
 ```
 
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#6.PNG)
+
 ### Combining histogram and density
 
 ```r
 a + geom_histogram(aes(y = ..density..),color = "black", fill = "white") + geom_density(alpha = 0.2, fill = "#FF6666") + theme_minimal()
 ```
+
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#7.PNG)
 
 ###  Dispersion
 
@@ -70,6 +83,8 @@ The geom argument is point, however that value can be replaced by line to graph 
 qplot(mpg, wt, data=mtcars, geom=c("point", "line"))
 ```
 
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#8.PNG)
+
 >The smooth value of graphical geom the fit and the standard error of LOESS (locally weighted scatterplot smoothing)
 
 ```r
@@ -78,23 +93,29 @@ qplot(mpg, wt, data = mtcars, geom = c("point", "smooth"))# standard error
 
 ```
 
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#9.PNG)
+
 ```r
 qplot(mpg, wt, data = mtcars, facets = .~factor(cyl), color = factor(cyl))+ geom_smooth(method = "lm") # metodo linear modeling, regresion lineal
 
 ```
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#10.PNG)
 
 ### Customize charts
 
 >The following examples show that the variable c and l is continuous so, by default, a continuous color scale is selected. If we want to assign a discrete scale, it is necessary to transform cly to the factor data type.
 
-
 ```r
 qplot(mpg, wt, data = mtcars, colour = cyl)
 ```
 
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#11.PNG)
+
 ```r
 qplot(mpg, wt, data = mtcars, shape = factor(cyl))
 ```
+
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#12.PNG)
 
 ### Labels for points
 
@@ -104,11 +125,15 @@ qplot(mpg, wt, data = mtcars, label = rownames(mtcars),
       hjust=0, vjust=0)
 ```
 
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#13.PNG)
+
 ### Boxplots or box-and-whisker plots
 
 ```r
 qplot(factor(am),mpg , data = mtcars, geom=c("boxplot", "jitter"))
 ```
+
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#14.PNG)
 
 ```r
 qplot(factor(am),mpg , data = mtcars, 
@@ -116,11 +141,15 @@ qplot(factor(am),mpg , data = mtcars,
       color = factor(am), fill = factor(am))
 ```
 
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#15.PNG)
+
 ```r
 qplot(factor(am),mpg , data = mtcars, 
       geom = "violin", stackdir = "center", binaxis = "y",
       color = factor(am), fill = factor(am))
 ```
+
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#16.PNG)
 
 ### Pyramid
 
@@ -162,6 +191,8 @@ n1 <- ggplot(pop, aes(x = Age, y = Population, fill = Gender)) +
   theme_bw()
 ```
 
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#17.PNG)
+
 ### Cake
 
 >When a whole is divided into parts, this type of graph is useful since it allows representing the contribution of each part to the whole
@@ -188,6 +219,8 @@ geom_bar(width = 1, stat = "identity")
 bp
 ```
 
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#18.PNG)
+
 ```r
 pie <- bp + coord_polar("y", start=0)
 pie + scale_fill_brewer("Blues") + 
@@ -196,6 +229,15 @@ pie + scale_fill_brewer("Blues") +
                 label = percent(value/100)), size=5)
 ```
 
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#19.PNG)
+
+##Sources
+
+>Daniela Ballari. (2018). Función qplot() de ggplot2. 12/11/2020, de rpubs Sitio web: https://rpubs.com/daniballari/qplot
+
+>Daniel Garavito. (--). Gráficas en R. 12/11/2020, de amazonaws Sitio web: https://rstudio-pubs-static.s3.amazonaws.com/415110_0f90425607e24bc2acf4f41f809633c7.html
+
+>Juan Carlos Correa y Nelfi González. (2002). Gráficos Estadísticos con R. 12/11/2020, de Universidad Nacional-Sede Medellín Sitio web: https://cran.r-project.org/doc/contrib/grafi3.pdf
 
 
 
