@@ -43,7 +43,6 @@ head(dat1)
 
 ```
 
-
 ```r
 
      sex            time     total_bill
@@ -68,7 +67,7 @@ fig
 
 As can be seen in the graph, they were grouped by sex, the information that the graph gives us is that men spend more at lunchtime, with dinner being where they spend the most for both sexes.
 
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/t1U2.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/p1u1.PNG)
 
 #### geom_col()
 
@@ -107,7 +106,7 @@ ggplot(stats, aes(x=CriticRating, y=AudienceRating,  fill=Genre, color=Genre)) +
 
 As can be seen in the graph, between the audience and the critics that the genres of the movies have in the form of graphs but it is not very feasible to use this type of graph for this it would be better with a scatter graph since it is a bit difficult interpret the information.
 
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/t1U2.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/p1u1%202.PNG)
 
 #### geom_histogram()
 
@@ -121,7 +120,7 @@ ggplot(stats, aes(x=BudgetMillions, fill=Genre, color=Genre)) + geom_histogram(a
 
 In the histogram we can see that in action movies they are the ones that require the most budget.
 
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/t1U2.PNG)
+![https://github.com/SalmaFabel/IMG/blob/main/p1u1%203.PNG)
 
 #### geom_errorbar()
 
@@ -168,7 +167,7 @@ p + geom_line(aes(group=group)) + geom_errorbar(limits, width=0.2)
 
 In the graph we can see that we have two groups, with their line of how they behave between “resp” and “trt”, the maximum and minimum limits being the error.
 
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/t1U2.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/p1u1%204.PNG)
 
 #### geom_area()
 
@@ -182,7 +181,7 @@ ggplot(stats, aes(x=BudgetMillions, fill=Genre)) + geom_area(stat ="bin", alpha=
 
 In the graph you can see separately the genres with their budget per year, with the naked eye you can see that action and comedy films have a high budget in the years and romance and thriller are very low in all years.
 
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/t1U2.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/p1u1%205.PNG)
 
 
 
