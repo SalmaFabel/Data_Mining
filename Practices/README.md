@@ -7,7 +7,7 @@
 
 ### Development
 
-> *geom_bar()*
+#### geom_bar()
 
 To make a bar graph in ggplot2, use geom_bar (), in this example they are bars that are grouped, to be able to do this you need to have the “plotly” library that allows you to create various types of interactive graphs.
 
@@ -68,7 +68,9 @@ fig
 
 As can be seen in the graph, they were grouped by sex, the information that the graph gives us is that men spend more at lunchtime, with dinner being where they spend the most for both sexes.
 
->*geom_col()*
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/t1U2.PNG)
+
+#### geom_col()
 
 This function is also a bar graph, the difference is that the heights of the bars represent values ​​in the data, the csv that was seen in class is taken as an example, which has information on the movie genre.
 
@@ -105,7 +107,9 @@ ggplot(stats, aes(x=CriticRating, y=AudienceRating,  fill=Genre, color=Genre)) +
 
 As can be seen in the graph, between the audience and the critics that the genres of the movies have in the form of graphs but it is not very feasible to use this type of graph for this it would be better with a scatter graph since it is a bit difficult interpret the information.
 
->*geom_histogram()*
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/t1U2.PNG)
+
+#### geom_histogram()
 
 To make a histogram this function is the most indicated, taking up the csv of the class, the column of the budget of the genre of the films is taken.
 
@@ -117,7 +121,9 @@ ggplot(stats, aes(x=BudgetMillions, fill=Genre, color=Genre)) + geom_histogram(a
 
 In the histogram we can see that in action movies they are the ones that require the most budget.
 
->*geom_errorbar()*
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/t1U2.PNG)
+
+#### geom_errorbar()
 
 The error graphs, these help us to see the error or the uncertainty of a value, this function is error bar graphs, for this a small dataframe is made.
 
@@ -162,7 +168,9 @@ p + geom_line(aes(group=group)) + geom_errorbar(limits, width=0.2)
 
 In the graph we can see that we have two groups, with their line of how they behave between “resp” and “trt”, the maximum and minimum limits being the error.
 
->*geom_area()*
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/t1U2.PNG)
+
+#### geom_area()
 
 The area function, the csv that was seen in class is retaken, which will have the budget in "x" and in "fill" it will be the genre of the film, the information is similar to the histogram only that here we will show it per year With the function “geom_area” we specify how the graph will be and with “facet_grid” so that it divides them by gender by year.
 
@@ -174,7 +182,7 @@ ggplot(stats, aes(x=BudgetMillions, fill=Genre)) + geom_area(stat ="bin", alpha=
 
 In the graph you can see separately the genres with their budget per year, with the naked eye you can see that action and comedy films have a high budget in the years and romance and thriller are very low in all years.
 
-
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/t1U2.PNG)
 
 
 
