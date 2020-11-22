@@ -45,11 +45,11 @@ head(dat1)
 
 ```r
 
-     sex            time     total_bill
-1   Female   Lunch    13.53
-2   Female   Dinner    16.81
-3   Male        Lunch    16.24
-4   Male        Dinner    17.42
+     sex   time total_bill
+1 Female  Lunch      13.53
+2 Female Dinner      16.81
+3   Male  Lunch      16.24
+4   Male Dinner      17.42
 
 ```
 
