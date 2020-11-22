@@ -4,7 +4,7 @@
 
 >A histogram is a graphical representation of a variable in the form of bars, where the area of ​​each bar is proportional to the frequency of the values ​​represented.
 
->Incluye el argumento bins para indicar el número de clases del histograma.
+>Include the bins argument to indicate the number of classes in the histogram.
 
 ```r
 
