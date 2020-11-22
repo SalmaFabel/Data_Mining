@@ -1,4 +1,4 @@
-# Mineria_de_Datos
+# Grammar of the graphs
 
 ### Histograms
 
