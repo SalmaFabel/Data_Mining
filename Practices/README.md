@@ -120,7 +120,7 @@ ggplot(stats, aes(x=BudgetMillions, fill=Genre, color=Genre)) + geom_histogram(a
 
 In the histogram we can see that in action movies they are the ones that require the most budget.
 
-![https://github.com/SalmaFabel/IMG/blob/main/p1u1%203.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/p1u1%203.PNG)
 
 #### geom_errorbar()
 
