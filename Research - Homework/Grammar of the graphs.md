@@ -23,7 +23,7 @@ geom_vline(xintercept = mean(mtcars$mpg), color="red")+
 geom_vline(xintercept = median(mtcars$mpg), color="blue")
 ```
 
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2 #2.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2%20%232.PNG)
 
 ### Density
 
@@ -35,7 +35,7 @@ qplot(mpg, data = mtcars, bins=5, geom = "density", fill = as.factor(am))
 
 ```
 
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2 #3.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2%20%233.PNG)
 
 ```r
 
@@ -43,7 +43,7 @@ qplot(mpg, data = mtcars, bins=5, geom = "density", color = as.factor(am), linet
 
 ```
 
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2 #4.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2%234.PNG)
 
 ### Graph separation
 
@@ -55,7 +55,7 @@ qplot(mpg, data = mtcars, bins=5, geom = "density", color = as.factor(am), facet
 
 ```
 
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#5.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2%235.PNG)
 
 ```r
 qplot(mpg, data = mtcars, geom = "density",
@@ -64,7 +64,7 @@ qplot(mpg, data = mtcars, geom = "density",
 
 ```
 
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#6.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2%236.PNG)
 
 ### Combining histogram and density
 
@@ -72,7 +72,7 @@ qplot(mpg, data = mtcars, geom = "density",
 a + geom_histogram(aes(y = ..density..),color = "black", fill = "white") + geom_density(alpha = 0.2, fill = "#FF6666") + theme_minimal()
 ```
 
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#7.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2%237.PNG)
 
 ###  Dispersion
 
@@ -83,7 +83,7 @@ The geom argument is point, however that value can be replaced by line to graph 
 qplot(mpg, wt, data=mtcars, geom=c("point", "line"))
 ```
 
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#8.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2%238.PNG)
 
 >The smooth value of graphical geom the fit and the standard error of LOESS (locally weighted scatterplot smoothing)
 
@@ -93,13 +93,13 @@ qplot(mpg, wt, data = mtcars, geom = c("point", "smooth"))# standard error
 
 ```
 
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#9.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2%239.PNG)
 
 ```r
 qplot(mpg, wt, data = mtcars, facets = .~factor(cyl), color = factor(cyl))+ geom_smooth(method = "lm") # metodo linear modeling, regresion lineal
 
 ```
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#10.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2%2310.PNG)
 
 ### Customize charts
 
@@ -109,13 +109,13 @@ qplot(mpg, wt, data = mtcars, facets = .~factor(cyl), color = factor(cyl))+ geom
 qplot(mpg, wt, data = mtcars, colour = cyl)
 ```
 
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#11.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2%2311.PNG)
 
 ```r
 qplot(mpg, wt, data = mtcars, shape = factor(cyl))
 ```
 
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#12.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2%2312.PNG)
 
 ### Labels for points
 
@@ -125,7 +125,7 @@ qplot(mpg, wt, data = mtcars, label = rownames(mtcars),
       hjust=0, vjust=0)
 ```
 
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#13.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2%2313.PNG)
 
 ### Boxplots or box-and-whisker plots
 
@@ -133,7 +133,7 @@ qplot(mpg, wt, data = mtcars, label = rownames(mtcars),
 qplot(factor(am),mpg , data = mtcars, geom=c("boxplot", "jitter"))
 ```
 
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#14.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2%2314.PNG)
 
 ```r
 qplot(factor(am),mpg , data = mtcars, 
@@ -141,7 +141,7 @@ qplot(factor(am),mpg , data = mtcars,
       color = factor(am), fill = factor(am))
 ```
 
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#15.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2%2315.PNG)
 
 ```r
 qplot(factor(am),mpg , data = mtcars, 
@@ -149,7 +149,7 @@ qplot(factor(am),mpg , data = mtcars,
       color = factor(am), fill = factor(am))
 ```
 
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#16.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2%2316.PNG)
 
 ### Pyramid
 
@@ -191,7 +191,7 @@ n1 <- ggplot(pop, aes(x = Age, y = Population, fill = Gender)) +
   theme_bw()
 ```
 
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#17.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2%2317.PNG)
 
 ### Cake
 
@@ -219,7 +219,7 @@ geom_bar(width = 1, stat = "identity")
 bp
 ```
 
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#18.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2%2318.PNG)
 
 ```r
 pie <- bp + coord_polar("y", start=0)
@@ -229,9 +229,9 @@ pie + scale_fill_brewer("Blues") +
                 label = percent(value/100)), size=5)
 ```
 
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2#19.PNG)
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/T1U2%2319.PNG)
 
-##Sources
+## Sources
 
 >Daniela Ballari. (2018). Función qplot() de ggplot2. 12/11/2020, de rpubs Sitio web: https://rpubs.com/daniballari/qplot
 
