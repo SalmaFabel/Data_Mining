@@ -1,1 +1,2 @@
-# Mineria_de_Datos
+# Data Mining
+
