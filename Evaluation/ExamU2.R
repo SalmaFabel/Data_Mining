@@ -7,21 +7,33 @@ setwd("C:\\Users\\salmi\\OneDrive\\Documentos\\GitHub\\Mineria-de-datos\\Evaluat
 movies <- read.csv("Project-Data.csv")
 head(movies)
 
-##Correcciones gramaticales de las columnas
+## Column grammar corrections
+
 movies2<-(movies[,c(3,6,8,18)])
 
 colnames(movies2) <- c("Genre","Studio","Budget", "Gross_US")
 head(movies2)
 
-##Filtro datos
-movies2<-movies2[movies2$Studio=="Buena Vista Studios" | movies2$Studio=="Fox" | movies2$Studio=="Paramount Pictures" | movies2$Studio=="Sony" | movies2$Studio=="Universal" | movies2$Studio=="WB" & 
-                   movies2$Genre=="action" | movies2$Genre=="adventure" | movies2$Genre=="animation" | movies2$Genre=="comedy" | movies2$Genre=="drama",]
+##Data filter
 
-##Grafica
+movies3<-movies2[(movies2$Studio=="Buena Vista Studios" | movies2$Studio=="Fox" | movies2$Studio=="Paramount Pictures" | movies2$Studio=="Sony" | movies2$Studio=="Universal" | movies2$Studio=="WB") & 
+                   (movies2$Genre=="action" | movies2$Genre=="adventure" | movies2$Genre=="animation" | movies2$Genre=="comedy" | movies2$Genre=="drama"),]
 
-p <- ggplot(movies2, aes(x=Genre, y=Gross_US,
+##Graph
+
+A <- ggplot(movies3, aes(x=Genre, y=Gross_US,
                         color=Studio, size=Budget))
 
-p +  geom_jitter() + geom_boxplot(size=0.3,color="Black") + ggtitle("Domestic Gross % by Genre")
+install.packages("extrafont")
+library("extrafont")
+font_import()
+loadfonts(device = "win")
 
-## Estetica de la grafica
+A + geom_jitter(shape=20) + geom_boxplot(size=0.3, alpha=0.5, color="Black") + 
+  theme(text=element_text(family="Comic Sans MS",size=12),
+    plot.title = element_text(color="Black", size=20, hjust = 0.5),
+    axis.title.x = element_text(color="purple", size=15),
+    axis.title.y = element_text(color="purple", size=15)) + 
+  scale_size(name="Budget $M") + ggtitle("Domestic Gross % by Genre") + ylab("Gross % US")
+
+
