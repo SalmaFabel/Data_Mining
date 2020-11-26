@@ -1,6 +1,4 @@
-# Data Mining
-
-## Unit 2 Index
+## Unit 2
 
 ### Practice
 
