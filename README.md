@@ -19,7 +19,7 @@
 
 - [Exam 1](https://github.com/SalmaFabel/Mineria_de_Datos/tree/Unit_1/Evaluation)
 
-## Unit 2 Index
+## Unit 2
 
 ### Practice
 
