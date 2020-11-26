@@ -32,4 +32,3 @@
 ### Exam 2
 
 - [Exam 2](https://github.com/SalmaFabel/Mineria_de_Datos/tree/Unit_2/Evaluation#exam-2-1)
-
