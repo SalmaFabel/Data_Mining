@@ -101,11 +101,11 @@ A + geom_jitter(shape=20) + geom_boxplot(size=0.3, alpha=0.5, color="Black") +
   scale_size(name="Budget $M") + ggtitle("Domestic Gross % by Genre") + ylab("Gross % US")
 ```
 
-![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/imagen%20grafica%20mineria%20U2.PNG)
-
 ### Graph display
 
 >This is the result of the graph, as you can see the action movies do very well but the drama movies not so much.
+
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/imagen%20grafica%20mineria%20U2.PNG)
 
 ## Video defending the development of the exam
 
