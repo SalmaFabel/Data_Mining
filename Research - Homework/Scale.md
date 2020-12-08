@@ -1,6 +1,5 @@
 # Scale function
 
-
 It is a generic function whose default method centers and / or scales the columns of a numeric matrix.
 
 ```r
@@ -8,8 +7,11 @@ scale(x, center = TRUE, scale = TRUE)
 ```
 
 ## Arguments
->* x *: a numeric array (like an object).
->* center *: either a logical value or a numeric vector of length equal to the number of columns in x, where 'similar numeric' means that as.numeric (.) will be applied successfully if is.numeric (.) is not true.
+
+>*x*: a numeric array (like an object).
+
+>*center*: either a logical value or a numeric vector of length equal to the number of columns in x, where 'similar numeric' means that as.numeric (.) will be applied successfully if is.numeric (.) is not true.
+
 >*scale*: either a logical value or a similar numeric vector of length equal to the number of columns of x.
 
 The value of "center" determines how the column is centered. If "center" is a vector of numeric type with a length equal to the number of columns of x, then each column of x has the corresponding value of center subtracted. If “center” is TRUE, centering is performed by subtracting the means of the columns (omitting NA s) from x their corresponding columns, and if “center” is thus FALSE, no centering is performed.
