@@ -4,15 +4,19 @@
 
 ### Practice
 
-- [Practice 1](https://github.com/SalmaFabel/Mineria_de_Datos/tree/Unit_2/Practices#practice-1)
+- [Practice 1 : Linear Regression](https://github.com/SalmaFabel/Mineria_de_Datos/tree/Unit_3/Unit%203/Practices#practice-1-linear-regression)
+- [Practice 2 : Multiple Linear Regression](https://github.com/SalmaFabel/Mineria_de_Datos/tree/Unit_3/Unit%203/Practices#practice-2--multiple-linear-regression)
+- [Practice 3 : Logistic Regression]()
 
 ### Research / Homework
 
-- [Grammar of the graphs](https://github.com/SalmaFabel/Mineria_de_Datos/blob/Unit_2/Research%20-%20Homework/Grammar%20of%20the%20graphs.md#grammar-of-the-graphs)
+- [Machine Learning](https://github.com/SalmaFabel/Mineria_de_Datos/blob/Unit_3/Unit%203/Research%20-%20Homework/Machine%20Learning.md#machine-learning)
+- [Scale function](https://github.com/SalmaFabel/Mineria_de_Datos/blob/Unit_3/Unit%203/Research%20-%20Homework/Scale.md#scale-function)
+
 
 ### Exam 3
 
-- [Exam 2](https://github.com/SalmaFabel/Mineria_de_Datos/tree/Unit_2/Evaluation#exam-2-1)
+- [Exam 3]()
 
 # Practice 1 Linear Regression
 
@@ -52,25 +56,25 @@ We have our model, it will show us the summary of the regressor that shows the m
 regressor = lm(formula = Salary ~ YearsExperience,
                data = dataset)
 summary(regressor)
-_______________________________________________________________________
-Call:
-lm(formula = Salary ~ YearsExperience, data = dataset)
 
-Residuals:
-    Min      1Q  Median      3Q     Max 
--7958.0 -4088.5  -459.9  3372.6 11448.0 
+##Call:
+##lm(formula = Salary ~ YearsExperience, data = dataset)
 
-Coefficients:
-                Estimate Std. Error t value Pr(>|t|)    
-(Intercept)      25792.2     2273.1   11.35 5.51e-12 ***
-YearsExperience   9450.0      378.8   24.95  < 2e-16 ***
+##Residuals:
+  ##  Min      1Q   Median      3Q     Max 
+##-7958.0 -4088.5  -459.9  3372.6 11448.0 
+
+##Coefficients:
+    ##            Estimate Std. Error t value Pr(>|t|)    
+##(Intercept)      25792.2     2273.1   11.35 5.51e-12 ***
+##YearsExperience   9450.0      378.8   24.95  < 2e-16 ***
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+##Signif. codes:  
+##0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 5788 on 28 degrees of freedom
-Multiple R-squared:  0.957,	Adjusted R-squared:  0.9554 
-F-statistic: 622.5 on 1 and 28 DF,  p-value: < 2.2e-16
+##Residual standard error: 5788 on 28 degrees of freedom
+##Multiple R-squared:  0.957,	Adjusted R-squared:  0.9554 
+##F-statistic: 622.5 on 1 and 28 DF,  p-value: < 2.2e-16
 ```
 
 Here we tell you what we want to predict, which is the salary, we send the model that is “regressor” and the new data to be predicted is “test_set”.
@@ -78,8 +82,8 @@ Here we tell you what we want to predict, which is the salary, we send the model
 ```r
 
 y_pred = predict(regressor, newdata = test_set)
-________________________________________________________________________
-> y_pred
+
+##> y_pred
         2         4         5         8        11        16 
  38077.15  44692.12  46582.12  56032.08  62647.05  72097.02 
        20        21        24        26 
