@@ -11,7 +11,8 @@ dataset <- read.csv('Social_Network_Ads.csv')
 dataset <- dataset[, 3:5]
 
 # Splitting the dataset into the Training set and Test set
-# Install.packages('caTools')
+install.packages('caTools')
+
 library(caTools)
 set.seed(123)
 split <- sample.split(dataset$Purchased, SplitRatio = 0.75)
@@ -52,11 +53,6 @@ ggplot(test_set, aes(x=Age, y=Purchased)) + geom_point() +
   stat_smooth(method="glm", method.args=list(family="binomial"), se=FALSE)
 
 # Visualization the Training set result
-# install.packages('ElemStatLearn') No work for me, 
-# manual mode. Go to this URL https://cran.r-project.org/src/contrib/Archive/ElemStatLearn/
-# Download with the latest date 2019-08-12 09:20	12M
-# Then follow this page steps https://riptutorial.com/r/example/5556/install-package-from-local-source
-
 library(ElemStatLearn)
 
 set = training_set
