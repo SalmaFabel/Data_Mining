@@ -133,3 +133,145 @@ ggplot() +
 
 # Practice 2  Multiple linear regression
 
+We make our workspace, with the path of where our csv is to be worked with.
+
+```r
+getwd()
+setwd("C:\\Users\\salmi\\OneDrive\\Documentos\\GitHub\\DataMining\\MachineLearning\\MultipleLinearRegression")
+getwd()
+```
+
+Then we load our dataset
+
+```r
+dataset <- read.csv('50_Startups.csv')
+```
+
+We transform our data to categorical. We use our factor function of the dataset, the column we want "State", we tell it our levels and we say what we want to represent it, which has to be numeric "1,2,3".
+
+```r
+dataset$State = factor(dataset$State,
+                       levels = c('New York', 'California', 'Florida'),
+                       labels = c(1,2,3))
+
+dataset
+```
+
+We load the library "caTtools". We have our seed of randomness, with "split" we divide the information by 80%, it will give us 40 for training and 10 for testing. All the training ones will be "true" and the test ones will be "false".
+
+```r
+library(caTools)
+set.seed(123)
+split <- sample.split(dataset$Profit, SplitRatio = 0.8)
+training_set <- subset(dataset, split == TRUE)
+test_set <- subset(dataset, split == FALSE)
+
+```
+
+We build the model, which has a formula for us to explain what we want to model and after which data that are "training_set". Then it will show us the summary that shows the mean, median, quartiles, minimum value and maximum value.
+
+```r
+regressor = lm(formula = Profit ~ .,
+               data = training_set )
+
+summary(regressor)
+
+```
+Then we are going to predict "y", which would be the profit portion.
+
+```r
+y_pred = predict(regressor, newdata = test_set)
+y_pred
+
+```
+
+Build the optimal model using Backward Elimination.
+
+```r
+regressor = lm(formula = Profit ~ R.D.Spend + Administration + Marketing.Spend + State,
+               data = dataset )
+summary(regressor)
+
+regressor = lm(formula = Profit ~ R.D.Spend + Administration + Marketing.Spend,
+               data = dataset )
+summary(regressor)
+
+regressor = lm(formula = Profit ~ R.D.Spend + Marketing.Spend,
+               data = dataset )
+summary(regressor)
+
+regressor = lm(formula = Profit ~ R.D.Spend + Marketing.Spend,
+               data = dataset )
+summary(regressor)
+
+```
+
+Generamos las nuevas predicciones.
+
+```r
+y_pred = predict(regressor, newdata = test_set)
+y_pred
+
+```
+
+There are 5 types of elimination, but the one that is used the most is "Backward Elimination".
+
+Backward Elimination: Starts with all predictors in the model (full model), iteratively removes least contributing predictors, and stops when you have a model in which all predictors are statistically significant
+
+
+First it is built, it begins by fitting a model with all the variables of interest. Then, the least significant variable is discarded, as long as it is not significant at our chosen critical level. We continue to successively readjust reduced models and apply the same rule until all the remaining variables are statistically significant.
+This means that the independent variable with a P value greater than the chosen level of significance is iteratively eliminated until the most significant variable remains.
+
+```r
+backwardElimination <- function(x, sl) {
+  numVars = length(x)
+  for (i in c(1:numVars)){
+    regressor = lm(formula = Profit ~ ., data = x)
+    maxVar = max(coef(summary(regressor))[c(2:numVars), "Pr(>|t|)"])
+    if (maxVar > sl){
+      j = which(coef(summary(regressor))[c(2:numVars), "Pr(>|t|)"] == maxVar)
+      x = x[, -j]
+    }
+    numVars = numVars - 1
+  }
+  return(summary(regressor))
+}
+
+SL = 0.05
+
+training_set
+backwardElimination(training_set, SL)
+```
+
+![ScreenShot](https://github.com/SalmaFabel/IMG/blob/main/multiple%20lineal.PNG)
+
+
+
+# Practice 3  Logistic Regression
+
+
+
+
+
+# Practice 4  K-NN classification template
+
+
+
+
+# Practice 5  Desicion Three
+
+
+
+
+# Practice 6  Random Forest
+
+
+
+
+# Practice 7 SVM
+
+
+
+
+# Practice 8  K-Means
+
