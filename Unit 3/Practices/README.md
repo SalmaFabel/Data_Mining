@@ -21,7 +21,7 @@
 
 ### Exam 3
 
-- [Exam 3]()
+- [Exam 3](https://github.com/SalmaFabel/Mineria_de_Datos/tree/Unit_3/Unit%203/Evaluation#exam-3)
 
 # Practice 1 Linear Regression
 
