@@ -1,7 +1,7 @@
 ## Exam U3
 
 getwd()
-setwd("C:\\Users\\salmi\\OneDrive\\Documentos\\GitHub\\Mineria-de-datos\\Evaluation")
+setwd("C:\\Users\\salmi\\OneDrive\\Documentos\\GitHub\\Mineria-de-datos\\Unit 3\\Evaluation")
 getwd()
 
 
@@ -28,20 +28,27 @@ test_set[-3] = scale(test_set[-3])
 
 
 
-
-classifier = naiveBayes(formula = Purchased ~ .,
-                        data = training_set,
-                        type = 'C-classification',
-                        kernel = 'linear')
+classifier = naiveBayes(x = training_set[-3],
+                        y = training_set$Purchased)
 naiveBayes
 
 # Predicting the Test set results
 y_pred = predict(classifier, newdata = test_set[-3])
 y_pred
 
+#[1] 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0
+#[28] 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1
+#[55] 1 0 1 0 0 1 1 0 1 1 1 0 1 1 1 1 1 0 1 1 1 0 1 0 0 1 0
+#[82] 1 0 1 0 1 1 0 0 1 1 0 1 0 1 1 1 1 0 1
+#Levels: 0 1
+
 # Making the Confusion Matrix
 cm = table(test_set[, 3], y_pred)
 cm
+#y_pred
+#0  1
+#0 57  7
+#1  7 29
 
 # Visualising the Training set results
 
